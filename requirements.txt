@@ -1,0 +1,25 @@
+# HaloSitek AI Microservice - Dependencies
+# ==========================================
+
+# --- Core API Framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# --- Data Validation ---
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# --- HTTP Client (untuk koneksi ke Ollama API) ---
+httpx==0.28.1
+
+# --- Image Processing & Encoding ---
+Pillow==11.1.0
+
+# --- AI/ML: Hugging Face Diffusers Pipeline ---
+diffusers==0.32.2
+transformers==4.47.1
+accelerate==1.2.1
+torch>=2.1.0
+
+# --- Utilities ---
+python-dotenv==1.0.1

@@ -1,0 +1,36 @@
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ─── Virtual Environment ───
+venv/
+.venv/
+env/
+
+# ─── Environment Variables (RAHASIA) ───
+.env
+
+# ─── IDE ───
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ─── Model Cache (terlalu besar untuk GitHub) ───
+*.pt
+*.bin
+*.safetensors
+models/
+
+# ─── Output Gambar ───
+output.png
+output*.png
+
+# ─── Misc ───
+*.log
