@@ -34,3 +34,7 @@ output*.png
 
 # ─── Misc ───
 *.log
+
+# ─── Dokumen & Database ───
+Dokumen Aturan Bangunan/
+chroma_db/

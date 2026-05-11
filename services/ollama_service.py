@@ -62,7 +62,21 @@ async def generate_text_response(
     Returns:
         Teks jawaban dari LLM.
     """
-    messages = [{"role": "system", "content": SYSTEM_PROMPT_ARCHITECT}]
+    # 1. Ambil konteks dari RAG (aturan bangunan)
+    from services.rag_service import get_relevant_context
+    rag_context = get_relevant_context(message)
+
+    # 2. Siapkan System Prompt
+    system_prompt = SYSTEM_PROMPT_ARCHITECT
+    if rag_context:
+        system_prompt += (
+            "\n\nBERIKUT ADALAH REFERENSI ATURAN BANGUNAN YANG RELEVAN DARI DATABASE:\n"
+            f"{rag_context}\n\n"
+            "Gunakan referensi di atas untuk menjawab pertanyaan pengguna jika relevan. "
+            "Jika tidak relevan, jawab berdasarkan pengetahuanmu sendiri."
+        )
+
+    messages = [{"role": "system", "content": system_prompt}]
 
     # Tambahkan riwayat percakapan
     for msg in history:

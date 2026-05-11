@@ -21,5 +21,12 @@ transformers==4.47.1
 accelerate==1.2.1
 torch>=2.1.0
 
+# --- RAG (Retrieval-Augmented Generation) ---
+langchain==0.3.1
+langchain-community==0.3.1
+langchain-chroma==0.1.4
+langchain-ollama==0.2.2
+pypdf==5.1.0
+
 # --- Utilities ---
 python-dotenv==1.0.1
